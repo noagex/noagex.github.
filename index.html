@@ -1,314 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NO AGEx | Fashion Has No Age</title>
 
-  <title>No AGEx | Fashion Has No Age</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- 🔹 REQUIRED: Replace favicon.png with your actual favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:#111}
 
-  <!-- 🔹 SEO -->
-  <meta name="description" content="No AGEx – Premium t-shirts for every generation. Fashion has no age. Custom printed, plain & bulk t-shirt manufacturing in India.">
-  <meta name="keywords" content="No AGEx, premium t shirts india, custom t shirts, bulk t shirt manufacturer">
-  <meta name="author" content="No AGEx">
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#000;
+  padding:18px 8%;
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand{
+  color:#fff;
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+.nav-links a{
+  color:#fff;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:500;
+}
 
-  <!-- 🔹 Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* HERO */
+.hero{
+  position:relative;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  animation:heroSlide 18s infinite;
+  z-index:-2;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8));
+  z-index:-1;
+}
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
+@keyframes heroSlide{
+  0%{background-image:url('hero1.png')}
+  33%{background-image:url('hero2.png')}
+  66%{background-image:url('hero3.png')}
+  100%{background-image:url('hero1.png')}
+}
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#fff;
-      color:#111;
-      line-height:1.7;
-      letter-spacing:0.2px;
-    }
+.hero h1{font-size:60px;letter-spacing:6px}
+.hero p{margin-top:15px;font-size:20px}
 
-    /* HEADER */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#000;
-      padding:18px 8%;
-      box-shadow:0 5px 20px rgba(0,0,0,0.15);
-    }
+section{padding:80px 8%}
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:38px}
 
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+.card{
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  text-align:center;
+}
+.card img{
+  width:100%;
+  border-radius:16px;
+}
 
-    /* 🔹 REQUIRED: Replace logo.png with your actual logo */
-    .nav img{
-      height:50px;
-      width:auto;
-    }
+.color-btns{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:15px 0;
+}
+.color-btns button{
+  padding:8px 14px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  background:#fff;
+  cursor:pointer;
+}
 
-    .nav-links a{
-      color:#fff;
-      margin-left:28px;
-      text-decoration:none;
-      font-weight:500;
-      position:relative;
-    }
+.discount{
+  background:#6b2cff;
+  color:#fff;
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:14px;
+}
+.price{
+  margin:12px 0;
+}
+.price del{color:#999;margin-right:8px}
+.price strong{font-size:22px}
 
-    .nav-links a::after{
-      content:'';
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      background:#fff;
-      transition:0.3s;
-    }
+.order-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#000;
+  color:#fff;
+  padding:12px 35px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .nav-links a:hover::after{width:100%;}
+/* ABOUT */
+.about{
+  background:#fafafa;
+  text-align:center;
+}
+.about p{
+  max-width:700px;
+  margin:20px auto 0;
+  color:#444;
+}
 
-    /* HERO */
-    .hero{
-      min-height:90vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1400&q=80');
-      background-size:cover;
-      background-position:center;
-      color:#fff;
-      padding:20px;
-    }
+/* ORDER MODAL */
+#orderModal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:2000;
+}
+.modal-box{
+  background:#fff;
+  max-width:500px;
+  margin:5% auto;
+  padding:30px;
+  border-radius:20px;
+}
+.modal-box form{
+  display:grid;
+  gap:12px;
+}
+.modal-box input,
+.modal-box textarea,
+.modal-box select{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+.modal-box button{
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:#6b2cff;
+  color:#fff;
+  font-weight:600;
+}
+.close{
+  text-align:center;
+  margin-top:10px;
+  cursor:pointer;
+  color:#666;
+}
 
-    .hero img{
-      height:120px;
-      margin-bottom:25px;
-    }
+/* FOOTER */
+footer{
+  background:#0d021a;
+  color:#cbb6ff;
+  text-align:center;
+  padding:25px;
+}
 
-    .hero h1{
-      font-size:56px;
-      letter-spacing:4px;
-      font-weight:700;
-    }
-
-    .hero p{
-      margin:18px 0 30px;
-      font-size:18px;
-      opacity:0.9;
-    }
-
-    .btn{
-      background:#6b2cff;
-      color:#fff;
-      padding:14px 38px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:600;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#4b1fbf;
-      color:#fff;
-    }
-
-    .btn:hover{
-      background:#000;
-      color:#fff;
-      border:1px solid #fff;
-    }
-
-    /* SECTIONS */
-    section{
-      padding:90px 8%;
-      border-bottom:1px solid #eee;
-    }
-
-    .title{
-      text-align:center;
-      margin-bottom:50px;
-    }
-
-    .title h2{
-      font-size:36px;
-      font-weight:600;
-    }
-
-    /* ABOUT */
-    .about p{
-      text-align:center;
-      max-width:900px;
-      margin:auto;
-      color:#555;
-      font-size:17px;
-    }
-
-    /* PRODUCTS */
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-    }
-
-    .card{
-      background:#fff;
-      padding:40px 30px;
-      border-radius:20px;
-      text-align:center;
-      border:1px solid #eee;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    /* GALLERY */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-    }
-
-    .gallery img{
-      width:100%;
-      border-radius:15px;
-    }
-
-    /* CONTACT */
-    .contact{
-      background:#000;
-      color:#fff;
-      text-align:center;
-    }
-
-    .contact p{margin:12px 0;}
-
-    /* FOOTER */
-    footer{background:#0d021a;color:#cbb6ff;text-align:center;padding:25px;font-size:14px}
-.footer-insta{margin-top:10px}
-.footer-insta a{color:#b266ff;text-decoration:none;font-weight:600}
-.insta-link{color:#b266ff !important;font-weight:600}
-
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      background:#25d366;
-      color:#fff;
-      padding:14px 22px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    @media(max-width:768px){
-      .hero h1{font-size:38px}
-      .nav-links{display:none}
-    }
-  </style>
+@media(max-width:768px){
+  .hero h1{font-size:40px}
+  .nav-links{display:none}
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    
+    <div class="brand">NO AGEx</div>
     <div class="nav-links">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="https://instagram.com/noage_x" target="_blank" class="insta-link">Instagram</a>
+      <a href="#about">About</a>
+      <a href="https://instagram.com/noage_x" target="_blank">Instagram</a>
     </div>
   </div>
 </header>
 
 <div class="hero" id="home">
   <div>
-    <h1>No AGEx</h1>
+    <h1>NO AGEx</h1>
     <p>Fashion Has No Age</p>
-    <a href="#contact" class="btn">Order Now</a>
   </div>
 </div>
 
-<section class="about" id="about">
-  <div class="title"><h2>About Us</h2></div>
-  <p>
-    No AGEx is a modern fashion brand built on one powerful belief — style has no age limit.
-    We design premium-quality t-shirts that combine comfort, durability, and timeless design.
-  </p>
-  <p>
-    Our collections are made for everyone — kids, youth, adults, and seniors — because confidence
-    never fades with time. Every piece reflects simplicity, versatility, and everyday luxury.
-  </p>
-  <p style="margin-top:20px;font-weight:600;color:#5a2d82;">
-    Designed in India • Fashion With No Age
-  </p>
-</section>
-
 <section id="products">
-  <div class="title"><h2>Our Products</h2></div>
+  <div class="title"><h2>Our Collection</h2></div>
+
   <div class="products">
-    <div class="card"><h3>Custom Printed T-Shirts</h3><p>Personalised designs created for everyday fashion and self-expression.</p></div>
-    <div class="card"><h3>Premium Plain T-Shirts</h3><p>Minimal, comfortable, and high-quality essentials for daily wear.</p></div>
+
+    <!-- FOCUSED TEE -->
+    <div class="card">
+      <h3>Focused Tee</h3>
+
+      <img id="focusedImg" src="ad.png">
+
+      <div class="color-btns">
+        <button onclick="changeFocused('ad.png')">Grey</button>
+        <button onclick="changeFocused('as2.png')">Beige</button>
+        <button onclick="changeFocused('ad3.png')">Black</button>
+      </div>
+
+      <div class="discount">20% OFF</div>
+      <div class="price"><del>₹1061</del><strong>₹849</strong></div>
+
+      <a class="order-btn" onclick="openOrder('Focused Tee')">Order Now</a>
+    </div>
+
+    <!-- PANTHER TEE -->
+    <div class="card">
+      <h3>Panther Tee</h3>
+
+      <img src="ad4.png">
+
+      <div class="discount">20% OFF</div>
+      <div class="price"><del>₹1061</del><strong>₹849</strong></div>
+
+      <a class="order-btn" onclick="openOrder('Panther Tee')">Order Now</a>
+    </div>
+
   </div>
 </section>
 
-<section id="size-chart">
-  <div class="title"><h2>Size Chart</h2></div>
-  <div style="overflow-x:auto;max-width:700px;margin:auto;">
-    <table style="width:100%;border-collapse:collapse;text-align:center;">
-      <tr style="background:#5a2d82;color:#fff;">
-        <th style="padding:12px;">Size</th>
-        <th>Chest (in)</th>
-        <th>Length (in)</th>
-      </tr>
-      <tr><td>S</td><td>38</td><td>26</td></tr>
-      <tr><td>M</td><td>40</td><td>27</td></tr>
-      <tr><td>L</td><td>42</td><td>28</td></tr>
-      <tr><td>XL</td><td>44</td><td>29</td></tr>
-      <tr><td>XXL</td><td>46</td><td>30</td></tr>
-    </table>
-  </div>
+<section class="about" id="about">
+  <div class="title"><h2>About NO AGEx</h2></div>
+  <p>
+    NO AGEx is built on one belief — style has no age.
+    Designed in India with premium fabrics, our tees are made
+    for confidence, comfort, and everyday strength.
+  </p>
 </section>
 
-<section id="gallery">
-  <div class="title"><h2>Product Gallery</h2></div>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80" alt="Premium t-shirt design">
-    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Minimal fashion t-shirt">
-    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Streetwear t-shirt">
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Classic t-shirt look">
-  </div>
-</section>
+<!-- ORDER MODAL -->
+<div id="orderModal">
+  <div class="modal-box">
+    <h3>Place Your Order</h3>
 
-<section class="contact" id="contact">
-  <div class="title"><h2>Place Your Order</h2></div>
-  <form action="mailto:noagex@gmail.com" method="post" enctype="text/plain" style="max-width:600px;margin:auto;">
-    <input type="text" name="Name" placeholder="Your Name" required style="width:100%;padding:12px;margin:10px 0;">
-    <input type="email" name="Email" placeholder="Your Email" required style="width:100%;padding:12px;margin:10px 0;">
-    <input type="text" name="Size" placeholder="Size (S / M / L / XL)" required style="width:100%;padding:12px;margin:10px 0;">
-    <input type="number" name="Quantity" placeholder="Quantity" required style="width:100%;padding:12px;margin:10px 0;">
-    <textarea name="Address" placeholder="Delivery Address" required style="width:100%;padding:12px;margin:10px 0;"></textarea>
-    <button type="submit" class="btn" style="margin-top:15px;">Submit Order</button>
-  </form>
-  <p style="margin-top:25px;">You can also DM us on <a href="https://instagram.com/noage_x" target="_blank" class="insta-link">Instagram</a></p>
-</section>
+    <form action="mailto:YOURMAIL@gmail.com" method="post" enctype="text/plain">
+      <input id="productName" name="Product" readonly>
+      <input name="Name" placeholder="Full Name" required>
+      <input name="Phone" placeholder="Phone Number" required>
+      <input name="Email" placeholder="Email Address" required>
+      <textarea name="Address" placeholder="Full Address" required></textarea>
+
+      <select name="Colour" required>
+        <option value="">Select Colour</option>
+        <option>Beige</option>
+        <option>Black</option>
+        <option>Grey</option>
+      </select>
+
+      <select name="Size" required>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option>
+        <option>XL</option><option>XXL</option>
+      </select>
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <div class="close" onclick="closeOrder()">Close</div>
+  </div>
+</div>
 
 <footer>
-  © 2025 No AGEx WEARS | Sparkle Beyond The Years
-  
+  © 2025 NO AGEx | Fashion Has No Age
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919830413242" target="_blank">WhatsApp Order</a>
+<script>
+function changeFocused(img){
+  document.getElementById("focusedImg").src = img;
+}
+function openOrder(product){
+  document.getElementById("orderModal").style.display="block";
+  document.getElementById("productName").value = product;
+}
+function closeOrder(){
+  document.getElementById("orderModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
