@@ -1,2 +1,2 @@
-# noagex.github.io
+# noagex.com
 fashion has no AGE
