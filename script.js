@@ -124,11 +124,11 @@ document.querySelectorAll(".view").forEach((btn,index)=>{
 
         if(index===0){
 
-            popupImage.src="images/ad.png";
+            popupImage.src="ad.png";
 
         }else{
 
-            popupImage.src="images/ad4.png";
+            popupImage.src="ad4.png";
 
         }
 
