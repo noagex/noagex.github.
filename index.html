@@ -1,323 +1,675 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NO AGEx | Fashion Has No Age</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Premium Streetwear | Fashion Has No Age">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;color:#111}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#000;
-  padding:18px 8%;
-}
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.brand{
-  color:#fff;
-  font-size:24px;
-  font-weight:700;
-  letter-spacing:2px;
-}
-.nav-links a{
-  color:#fff;
-  margin-left:25px;
-  text-decoration:none;
-  font-weight:500;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero{
-  position:relative;
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  animation:heroSlide 18s infinite;
-  z-index:-2;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8));
-  z-index:-1;
-}
+<link rel="stylesheet" href="style.css">
 
-@keyframes heroSlide{
-  0%{background-image:url('hero1.png')}
-  33%{background-image:url('hero2.png')}
-  66%{background-image:url('hero3.png')}
-  100%{background-image:url('hero1.png')}
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-.hero h1{font-size:60px;letter-spacing:6px}
-.hero p{margin-top:15px;font-size:20px}
-
-section{padding:80px 8%}
-.title{text-align:center;margin-bottom:50px}
-.title h2{font-size:38px}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
-}
-.card{
-  padding:25px;
-  border-radius:22px;
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
-  text-align:center;
-}
-.card img{
-  width:100%;
-  border-radius:16px;
-}
-
-.color-btns{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin:15px 0;
-}
-.color-btns button{
-  padding:8px 14px;
-  border-radius:20px;
-  border:1px solid #ccc;
-  background:#fff;
-  cursor:pointer;
-}
-
-.discount{
-  background:#6b2cff;
-  color:#fff;
-  display:inline-block;
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:14px;
-}
-.price{
-  margin:12px 0;
-}
-.price del{color:#999;margin-right:8px}
-.price strong{font-size:22px}
-
-.order-btn{
-  display:inline-block;
-  margin-top:15px;
-  background:#000;
-  color:#fff;
-  padding:12px 35px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ABOUT */
-.about{
-  background:#fafafa;
-  text-align:center;
-}
-.about p{
-  max-width:700px;
-  margin:20px auto 0;
-  color:#444;
-}
-
-/* ORDER MODAL */
-#orderModal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  z-index:2000;
-}
-.modal-box{
-  background:#fff;
-  max-width:500px;
-  margin:5% auto;
-  padding:30px;
-  border-radius:20px;
-}
-.modal-box form{
-  display:grid;
-  gap:12px;
-}
-.modal-box input,
-.modal-box textarea,
-.modal-box select{
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-.modal-box button{
-  padding:14px;
-  border:none;
-  border-radius:30px;
-  background:#6b2cff;
-  color:#fff;
-  font-weight:600;
-}
-.close{
-  text-align:center;
-  margin-top:10px;
-  cursor:pointer;
-  color:#666;
-}
-
-/* FOOTER */
-footer{
-  background:#0d021a;
-  color:#cbb6ff;
-  text-align:center;
-  padding:25px;
-}
-
-@media(max-width:768px){
-  .hero h1{font-size:40px}
-  .nav-links{display:none}
-}
-</style>
 </head>
 
 <body>
 
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="loader-logo">
+
+<img src="logo1.png">
+
+</div>
+
+</div>
+
+<!-- Navbar -->
+
 <header>
-  <div class="nav">
-    <div class="brand">NO AGEx</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="https://instagram.com/noage_x" target="_blank">Instagram</a>
-    </div>
-  </div>
+
+<nav class="navbar">
+
+<a href="#" class="logo">
+
+<img src="logo.png">
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#collection">Men</a></li>
+
+<li><a href="#collection">New Arrivals</a></li>
+
+<li><a href="#reviews">Reviews</a></li>
+
+<li><a href="#newsletter">Newsletter</a></li>
+
+<li><a href="#footer">Contact</a></li>
+
+</ul>
+
+<div class="nav-icons">
+
+<i class="fa-regular fa-heart"></i>
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+</div>
+
+</nav>
+
 </header>
 
-<div class="hero" id="home">
-  <div>
-    <h1>NO AGEx</h1>
-    <p>Fashion Has No Age</p>
-  </div>
+<!-- Hero -->
+
+<section class="hero">
+
+<img src="hero1.png" class="hero-bg">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h3>PREMIUM STREETWEAR</h3>
+
+<h1>NO AGEx</h1>
+
+<p>Fashion Has No Age</p>
+
+<h2>MOVE WITHOUT LIMITS</h2>
+
+<a href="#collection" class="hero-btn">
+
+SHOP NOW
+
+</a>
+
 </div>
 
-<section id="products">
-  <div class="title"><h2>Our Collection</h2></div>
-
-  <div class="products">
-
-    <!-- FOCUSED TEE -->
-    <div class="card">
-      <h3>Focused Tee</h3>
-
-      <img id="focusedImg" src="ad.png">
-
-      <div class="color-btns">
-        <button onclick="changeFocused('ad.png')">Grey</button>
-        <button onclick="changeFocused('as2.png')">Beige</button>
-        <button onclick="changeFocused('ad3.png')">Black</button>
-      </div>
-
-      <div class="discount">20% OFF</div>
-      <div class="price"><del>₹1061</del><strong>₹849</strong></div>
-
-      <a class="order-btn" onclick="openOrder('Focused Tee')">Order Now</a>
-    </div>
-
-    <!-- PANTHER TEE -->
-    <div class="card">
-      <h3>Panther Tee</h3>
-
-      <img src="ad4.png">
-
-      <div class="discount">20% OFF</div>
-      <div class="price"><del>₹1061</del><strong>₹849</strong></div>
-
-      <a class="order-btn" onclick="openOrder('Panther Tee')">Order Now</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="about" id="about">
-  <div class="title"><h2>About NO AGEx</h2></div>
-  <p>
-    NO AGEx is built on one belief — style has no age.
-    Designed in India with premium fabrics, our tees are made
-    for confidence, comfort, and everyday strength.
-  </p>
+<!-- Featured -->
+
+<section class="featured">
+
+<h2>
+
+NEW ARRIVALS
+
+</h2>
+
+<p>
+
+Premium oversized tees crafted for every generation.
+
+</p>
+
 </section>
 
-<!-- ORDER MODAL -->
-<div id="orderModal">
-  <div class="modal-box">
-    <h3>Place Your Order</h3>
+<!-- Collection -->
 
-    <form action="mailto:YOURMAIL@gmail.com" method="post" enctype="text/plain">
-      <input id="productName" name="Product" readonly>
-      <input name="Name" placeholder="Full Name" required>
-      <input name="Phone" placeholder="Phone Number" required>
-      <input name="Email" placeholder="Email Address" required>
-      <textarea name="Address" placeholder="Full Address" required></textarea>
+<section id="collection">
 
-      <select name="Colour" required>
-        <option value="">Select Colour</option>
-        <option>Beige</option>
-        <option>Black</option>
-        <option>Grey</option>
-      </select>
+<div class="section-heading">
 
-      <select name="Size" required>
-        <option value="">Select Size</option>
-        <option>S</option><option>M</option><option>L</option>
-        <option>XL</option><option>XXL</option>
-      </select>
+<h2>
 
-      <button type="submit">Submit Order</button>
-    </form>
+MEN'S COLLECTION
 
-    <div class="close" onclick="closeOrder()">Close</div>
-  </div>
+</h2>
+
+<p>
+
+Built Different.
+
+Designed For Everyone.
+
+</p>
+
 </div>
 
-<footer>
-  © 2025 NO AGEx | Fashion Has No Age
+<div class="products">
+
+<!-- PRODUCT 1 -->
+
+<div class="card">
+
+<div class="badge">
+
+NEW
+
+</div>
+
+<div class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</div>
+
+<div class="slider">
+
+<img src="ad.png" class="slide active">
+
+<img src="ad2.png" class="slide">
+
+<img src="ad3.png" class="slide">
+
+<button class="prev">
+
+❮
+
+</button>
+
+<button class="next">
+
+❯
+
+</button>
+
+</div>
+
+<div class="dots">
+
+<span class="dot active"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+<div class="product-content">
+
+<h3>
+
+Focused Tee
+
+</h3>
+
+<p>
+
+Premium Oversized Tee
+
+</p>
+
+<div class="price">
+
+<span class="old">
+
+₹1061
+
+</span>
+
+<span class="new">
+
+₹799
+
+</span>
+
+</div>
+
+<div class="colors">
+
+<span class="color grey"></span>
+
+<span class="color cream"></span>
+
+<span class="color black"></span>
+
+</div>
+
+<select>
+
+<option>Select Size</option>
+
+<option>S</option>
+
+<option>M</option>
+
+<option>L</option>
+
+<option>XL</option>
+
+<option>XXL</option>
+
+</select>
+
+<div class="buttons">
+
+<button class="buy">
+
+Buy Now
+
+</button>
+
+<button class="view">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 2 -->
+
+<div class="card">
+
+<div class="badge bestseller">
+
+BEST SELLER
+
+</div>
+
+<div class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</div>
+
+<div class="slider">
+
+<img src="ad4.png" class="slide active">
+
+</div>
+
+<div class="product-content">
+
+<h3>
+
+Panther Tee
+
+</h3>
+
+<p>
+
+Premium Oversized Tee
+
+</p>
+
+<div class="price">
+
+<span class="old">
+
+₹1061
+
+</span>
+
+<span class="new">
+
+₹799
+
+</span>
+
+</div>
+
+<div class="colors">
+
+<span class="color black"></span>
+
+</div>
+
+<select>
+
+<option>Select Size</option>
+
+<option>S</option>
+
+<option>M</option>
+
+<option>L</option>
+
+<option>XL</option>
+
+<option>XXL</option>
+
+</select>
+
+<div class="buttons">
+
+<button class="buy">
+
+Buy Now
+
+</button>
+
+<button class="view">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section><!-- =========================
+ABOUT BRAND
+========================== -->
+
+<section class="about">
+
+<div class="about-content">
+
+<h2>OUR STORY</h2>
+
+<p>
+
+NO AGEx is more than clothing.
+
+It represents confidence, freedom and individuality.
+
+We believe fashion should never have an age limit.
+
+Every piece is designed to make you stand out with premium quality and timeless style.
+
+</p>
+
+<a href="#collection" class="about-btn">
+
+Explore Collection
+
+</a>
+
+</div>
+
+</section>
+
+<!-- =========================
+REVIEWS
+========================== -->
+
+<section class="reviews" id="reviews">
+
+<h2>WHAT OUR CUSTOMERS SAY</h2>
+
+<div class="review-container">
+
+<div class="review-card">
+
+★★★★★
+
+<h3>Rahul</h3>
+
+<p>
+
+Amazing quality.
+
+Feels much more premium than expected.
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+★★★★★
+
+<h3>Harsh</h3>
+
+<p>
+
+Oversized fitting is perfect.
+
+Definitely buying again.
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+★★★★★
+
+<h3>Ayush</h3>
+
+<p>
+
+Fabric quality is insane.
+
+Looks premium.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+INSTAGRAM
+========================== -->
+
+<section class="instagram">
+
+<h2>
+
+FOLLOW @NOAGEX
+
+</h2>
+
+<div class="insta-grid">
+
+<img src="ad.png">
+
+<img src="ad2.png">
+
+<img src="ad3.png">
+
+<img src="ad4.png">
+
+</div>
+
+</section>
+
+<!-- =========================
+NEWSLETTER
+========================== -->
+
+<section class="newsletter" id="newsletter">
+
+<h2>
+
+JOIN THE COMMUNITY
+
+</h2>
+
+<p>
+
+Get exclusive drops before everyone else.
+
+</p>
+
+<form>
+
+<input type="email"
+
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</section>
+
+<!-- =========================
+QUICK VIEW POPUP
+========================== -->
+
+<div class="popup" id="popup">
+
+<div class="popup-box">
+
+<span class="close">
+
+×
+
+</span>
+
+<img src="ad.png" id="popupImage">
+
+<h2>
+
+Focused Tee
+
+</h2>
+
+<p>
+
+Premium Oversized Cotton Tee
+
+</p>
+
+<h3>
+
+₹799
+
+</h3>
+
+<button>
+
+Buy Now
+
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================
+STICKY CART
+========================== -->
+
+<div class="sticky-cart">
+
+<button>
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+Cart (0)
+
+</button>
+
+</div>
+
+<!-- =========================
+FOOTER
+========================== -->
+
+<footer id="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<img src="logo.png"
+
+class="footer-logo">
+
+<p>
+
+Fashion Has No Age.
+
+Premium Streetwear.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+SHOP
+
+</h3>
+
+<a href="#">Men</a>
+
+<a href="#">New Arrivals</a>
+
+<a href="#">Collections</a>
+
+</div>
+
+<div>
+
+<h3>
+
+SUPPORT
+
+</h3>
+
+<a href="#">Contact</a>
+
+<a href="#">Returns</a>
+
+<a href="#">Privacy Policy</a>
+
+</div>
+
+<div>
+
+<h3>
+
+FOLLOW US
+
+</h3>
+
+<a href="noage_x">
+
+Instagram
+
+</a>
+
+<a href="9830413242(NOAGE_X)">
+
+Whatsapp
+
+</a>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 NO AGEx
+
+Fashion Has No Age
+
+</div>
+
 </footer>
 
-<script>
-function changeFocused(img){
-  document.getElementById("focusedImg").src = img;
-}
-function openOrder(product){
-  document.getElementById("orderModal").style.display="block";
-  document.getElementById("productName").value = product;
-}
-function closeOrder(){
-  document.getElementById("orderModal").style.display="none";
-}
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
